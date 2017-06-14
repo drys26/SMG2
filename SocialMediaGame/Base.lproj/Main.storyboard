@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FOu-Xu-2QT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -218,6 +218,7 @@
                         <outlet property="facebookLogin" destination="EIG-3R-DOo" id="wGk-Ua-8Z0"/>
                         <outlet property="googleLogin" destination="7nv-vR-3mJ" id="iTC-iR-FQW"/>
                         <outlet property="loginButton" destination="AtY-X1-FyD" id="7F8-FQ-7Il"/>
+                        <segue destination="FOu-Xu-2QT" kind="show" identifier="goToMain" id="cNm-Uj-FHA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -251,7 +252,7 @@
             <objects>
                 <navigationController id="Xdm-Wz-WEK" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="djG-H5-8ir">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="djG-H5-8ir">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.20392156862745098" green="0.32156862745098036" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -324,7 +325,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TfE-AF-yIF">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCell" id="TfE-AF-yIF" customClass="HomeCollectionViewCell" customModule="SocialMediaGame" customModuleProvider="target">
                                         <rect key="frame" x="15.5" y="0.0" width="344" height="331"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -343,13 +344,18 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mbm-C3-fuE">
-                                                    <rect key="frame" x="20" y="76" width="304" height="235"/>
+                                                    <rect key="frame" x="0.0" y="76" width="344" height="235"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="0.32986681800000001" blue="0.20344642430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </view>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="authorDisplayName" destination="b4w-fp-B1e" id="6Ob-Pd-M2i"/>
+                                            <outlet property="authorImageView" destination="IAu-ZG-qdz" id="Cvf-sF-liZ"/>
+                                            <outlet property="displayView" destination="mbm-C3-fuE" id="TbN-Sn-UGF"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -362,6 +368,9 @@
                             <constraint firstItem="Wdl-Pv-gAk" firstAttribute="top" secondItem="6rs-53-5HW" secondAttribute="bottom" id="noB-xA-2Fg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="homeCollectionView" destination="6rs-53-5HW" id="V4A-M6-uRb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzi-5X-x22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -469,10 +478,10 @@
             </objects>
             <point key="canvasLocation" x="933.60000000000002" y="-630.13493253373315"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Post View Controller-->
         <scene sceneID="jEv-lI-qpz">
             <objects>
-                <viewController id="RTy-YV-3CN" sceneMemberID="viewController">
+                <viewController id="RTy-YV-3CN" customClass="AddPostViewController" customModule="SocialMediaGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PT1-ru-o5P"/>
                         <viewControllerLayoutGuide type="bottom" id="qkI-bC-Zd0"/>
@@ -481,9 +490,13 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IgP-tH-gal">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_1" translatesAutoresizingMaskIntoConstraints="NO" id="IgP-tH-gal">
                                 <rect key="frame" x="16" y="72" width="131" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="e99-fK-k2P" appends="YES" id="otT-cu-KSR"/>
+                                </connections>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="arm-xE-M3U">
                                 <rect key="frame" x="155" y="166" width="204" height="30"/>
@@ -503,12 +516,25 @@
                                 <rect key="frame" x="172" y="242" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="postAction:" destination="RTy-YV-3CN" eventType="touchUpInside" id="Zlf-vy-186"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="postDescription" destination="d9j-Qy-Za3" id="BI4-r3-zDU"/>
+                        <outlet property="postImage" destination="IgP-tH-gal" id="IL1-Ar-ih5"/>
+                        <outlet property="postTitle" destination="arm-xE-M3U" id="oPL-n6-l02"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yp7-m8-1Hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="e99-fK-k2P">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="RTy-YV-3CN" id="Xn9-tm-D1y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1800.8" y="-630.13493253373315"/>
         </scene>
@@ -535,6 +561,7 @@
         <image name="cropped-Gaming-1" width="1500" height="472"/>
         <image name="icons8-menu_filled" width="25" height="25"/>
         <image name="icons8-user_filled" width="25" height="25"/>
+        <image name="image_1" width="1920" height="1080"/>
         <image name="maxresdefault_live" width="1280" height="720"/>
     </resources>
 </document>
