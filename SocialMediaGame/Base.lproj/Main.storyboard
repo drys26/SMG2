@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f0S-mW-ro5" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="140.5" y="196" width="95.5" height="50"/>
+                                <rect key="frame" x="183.5" y="196" width="8" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2ZT-Nb-AqJ"/>
                                 </constraints>
@@ -76,7 +76,7 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yP0-st-88w" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="155" y="271" width="66.5" height="50"/>
+                                <rect key="frame" x="183.5" y="271" width="8" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3gM-dq-pQM"/>
                                 </constraints>
@@ -251,7 +251,7 @@
             <objects>
                 <navigationController id="Xdm-Wz-WEK" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="djG-H5-8ir">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="djG-H5-8ir">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.20392156862745098" green="0.32156862745098036" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
