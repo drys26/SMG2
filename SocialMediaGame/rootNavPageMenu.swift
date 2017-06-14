@@ -12,11 +12,9 @@ import SWRevealViewController
 
 class rootNavPageMenu: UIViewController {
 
-    
     var pageMenu: CAPSPageMenu?
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
