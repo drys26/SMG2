@@ -18,6 +18,9 @@ pod 'FirebaseUI/Storage'
 pod 'SDWebImage/Core’
 pod 'Firebase/Database'
 pod 'JSQMessagesViewController'
+pod 'SkyFloatingLabelTextField'
+pod 'PageMenu'
+pod ‘SWRevealViewController’
 
   target 'SocialMediaGameTests' do
     inherit! :search_paths

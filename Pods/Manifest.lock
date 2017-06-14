@@ -69,9 +69,12 @@ PODS:
   - JSQMessagesViewController (7.3.4):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
+  - PageMenu (2.0.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - SkyFloatingLabelTextField (3.1.0)
+  - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
   - FBSDKCoreKit
@@ -84,7 +87,10 @@ DEPENDENCIES:
   - FirebaseUI/Storage
   - GoogleSignIn
   - JSQMessagesViewController
+  - PageMenu
   - SDWebImage/Core
+  - SkyFloatingLabelTextField
+  - SWRevealViewController
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -105,8 +111,11 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
   JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SkyFloatingLabelTextField: 26a92ad407044dd5a7c3e4e348738ff0991514fe
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: 9c07170f802e3de4412b21be1437802dafd65bc5
+PODFILE CHECKSUM: 5d4dbaca5add23d2bd3625fe0a8ab5a0707c9154
 
 COCOAPODS: 1.2.1
